@@ -50,9 +50,10 @@ jobs:
               ref: 'main',
               inputs: {
                 target_repo: targetRepo,
-                target_workflow: 'update-image.yml',
                 force_build: '${{ inputs.force_build }}' === 'true' ? 'true' : 'false',
                 target_version: '${{ inputs.target_version }}',
                 publish_to_store: '${{ inputs.publish_to_store }}' === 'true' ? 'true' : 'false',
+                config_repo: 'CodeEagle/lzcat-apps',
+                config_ref: 'main',
               },
             });
